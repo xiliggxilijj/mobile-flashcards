@@ -31,7 +31,7 @@ class NewDeckView extends Component {
 
     this.setState(() => ({title: ''}))
 
-    this.props.navigation.navigate('Deck', {deckId: deckId, deckName: title});
+    this.props.navigation.navigate('DeckView', {deckId: deckId, deckName: title});
     saveDeck(deckId, newDeck)
   }
 
