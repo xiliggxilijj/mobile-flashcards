@@ -1,28 +1,25 @@
-## Udacity Mobile Flashcards
-
-To install:
-
-1. clone this repo
-2. Run yarn commands:
-
-
-```
-		yarn install
-		yarn start
-```
-
-## Testing
-
-This was tested on expo on both **ios** and the **ios simulator**. I didn't test it on android.
-
-## Design
-
-The storage uses Asyncstorage. A global json object is kept around, and is used as the truth while the app is loaded. It is initalized with the sample data from the project description page. It is updated from the Async store when the data is ready. Changes to the datastore are made through the utils/storage.js api. The changes are made locally, and then save is called. Save notifies the App.js top <App> that there is a change, through a callback. That calls setstate, and pushes a re-render down through all of the children views.  This turned out to be a powerful and simple way to update everything.
+## Mobile flash cards
+This app is one of the requirements for the Udacity React & Redux part of the React-Nanodegree. This app allows users to study collections of flashcards, create different categories of flashcards called "decks", add flashcards to those decks, take quizzes on those decks and get answer stats
+It includs the following Views
+1) Home view: includes two tabs for decklist and new deck GUI, from here user can go to deck view or delete existing deck
+2) Deck View: new cards can be added or a quiz can be started
+3) New Deck View: create new deck
+4) New Card View: create new questions for a deck
+5) Quiz View: answer quesitons or checj answers.
 
 
-## Unsolved Problems
-* I am not sure why the header height is wrong
+## Development and test
 
-## Left to future improvements
-* there is no way to delete or edit data right now
+The app was developed using the [Expo](https://expo.io/) app  and tested on android emulator.
+
+To install
+1) Clone the Project 
+   git clone https://github.com/xiliggxilijj/mobile-flashcards.git
+2) install project and all dependencies 
+   yarn install
+To launch
+   start the development server with `yarn start`
+  
+## Future improvements
+* delete cards, edit cards and decks
 
